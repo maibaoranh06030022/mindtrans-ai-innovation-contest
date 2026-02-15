@@ -1,0 +1,434 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===========================================
+   MINDTRANS AI - CUSTOM COLOR PALETTE
+   Background: #004643 (Xanh đậm)
+   Headline: #fffffe (Trắng)
+   Paragraph: #abd1c6 (Xanh nhạt)
+   Button: #f9bc60 (Vàng accent)
+   Button text: #001e1d (Đen xanh)
+   Highlight: #f9bc60 (Vàng)
+   Secondary: #abd1c6 (Xanh nhạt)
+   Tertiary/Destructive: #e16162 (Đỏ coral)
+   =========================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* MindTrans aliases (light mode) */
+  --mindtrans-bg: var(--background);
+  --mindtrans-headline: var(--card-foreground);
+  --mindtrans-paragraph: var(--muted-foreground);
+  --mindtrans-button: var(--primary);
+  --mindtrans-button-text: var(--primary-foreground);
+  --mindtrans-stroke: var(--border);
+  --mindtrans-main: var(--card);
+  --mindtrans-highlight: var(--primary);
+  --mindtrans-secondary: var(--secondary);
+  --mindtrans-tertiary: var(--destructive);
+  /* Light mode - Polytter inspired */
+  --background: #e8e4e6;
+  --foreground: #001e1d;
+  --card: #fffffe;
+  --card-foreground: #001e1d;
+  --popover: #fffffe;
+  --popover-foreground: #001e1d;
+  --primary: #f9bc60;
+  --primary-foreground: #001e1d;
+  --secondary: #abd1c6;
+  --secondary-foreground: #001e1d;
+  --muted: #abd1c6;
+  --muted-foreground: #004643;
+  --accent: #f9bc60;
+  --accent-foreground: #001e1d;
+  --destructive: #e16162;
+  --border: #abd1c6;
+  --input: #abd1c6;
+  --ring: #f9bc60;
+  --chart-1: #f9bc60;
+  --chart-2: #abd1c6;
+  --chart-3: #e16162;
+  --chart-4: #004643;
+  --chart-5: #e8e4e6;
+  --sidebar: #004643;
+  --sidebar-foreground: #fffffe;
+  --sidebar-primary: #f9bc60;
+  --sidebar-primary-foreground: #001e1d;
+  --sidebar-accent: #abd1c6;
+  --sidebar-accent-foreground: #001e1d;
+  --sidebar-border: #abd1c6;
+  --sidebar-ring: #f9bc60;
+}
+
+.dark {
+  /* Dark mode - MindTrans AI Polytter style */
+  --background: #004643;
+  --foreground: #fffffe;
+  --card: #003d3a;
+  --card-foreground: #fffffe;
+  --popover: #003d3a;
+  --popover-foreground: #fffffe;
+  --primary: #f9bc60;
+  --primary-foreground: #001e1d;
+  --secondary: #006660;
+  --secondary-foreground: #abd1c6;
+  --muted: #005550;
+  --muted-foreground: #abd1c6;
+  --accent: #f9bc60;
+  --accent-foreground: #001e1d;
+  --destructive: #e16162;
+  --border: rgba(171, 209, 198, 0.2);
+  --input: rgba(171, 209, 198, 0.15);
+  --ring: #f9bc60;
+  --chart-1: #f9bc60;
+  --chart-2: #abd1c6;
+  --chart-3: #e16162;
+  --chart-4: #fffffe;
+  --chart-5: #006660;
+  --sidebar: #003d3a;
+  --sidebar-foreground: #fffffe;
+  --sidebar-primary: #f9bc60;
+  --sidebar-primary-foreground: #001e1d;
+  --sidebar-accent: #006660;
+  --sidebar-accent-foreground: #abd1c6;
+  --sidebar-border: rgba(171, 209, 198, 0.2);
+  --sidebar-ring: #f9bc60;
+
+  /* MindTrans aliases (dark mode) */
+  --mindtrans-bg: var(--background);
+  --mindtrans-headline: var(--card-foreground);
+  --mindtrans-paragraph: var(--muted-foreground);
+  --mindtrans-button: var(--primary);
+  --mindtrans-button-text: var(--primary-foreground);
+  --mindtrans-stroke: var(--border);
+  --mindtrans-main: var(--card);
+  --mindtrans-highlight: var(--primary);
+  --mindtrans-secondary: var(--secondary);
+  --mindtrans-tertiary: var(--destructive);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ===========================================
+   CUSTOM SHADOW EFFECTS - HIỆU ỨNG BÓNG NỔI
+   =========================================== */
+@layer utilities {
+  /* Bóng nổi cơ bản */
+  .shadow-lifted {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 30, 29, 0.1),
+      0 2px 4px -2px rgba(0, 30, 29, 0.1),
+      0 0 0 1px rgba(171, 209, 198, 0.1);
+  }
+
+  /* Bóng nổi mạnh */
+  .shadow-lifted-lg {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 30, 29, 0.15),
+      0 4px 6px -4px rgba(0, 30, 29, 0.1),
+      0 0 0 1px rgba(171, 209, 198, 0.1);
+  }
+
+  /* Bóng nổi khi hover */
+  .shadow-lifted-hover {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 30, 29, 0.15),
+      0 8px 10px -6px rgba(0, 30, 29, 0.1),
+      0 0 0 1px rgba(249, 188, 96, 0.3);
+    transform: translateY(-2px);
+  }
+
+  /* Bóng cho card với accent */
+  .shadow-accent {
+    box-shadow:
+      0 4px 14px 0 rgba(249, 188, 96, 0.25),
+      0 0 0 1px rgba(249, 188, 96, 0.1);
+  }
+
+  /* Bóng cho destructive */
+  .shadow-destructive {
+    box-shadow:
+      0 4px 14px 0 rgba(225, 97, 98, 0.25),
+      0 0 0 1px rgba(225, 97, 98, 0.1);
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #f9bc60 0%, #e16162 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #abd1c6 0%, #fffffe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(249, 188, 96, 0.4);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(171, 209, 198, 0.4);
+  }
+
+  /* Reading mode typography */
+  .reading-mode {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+  }
+
+  .reading-mode p {
+    margin-bottom: 1.5em;
+  }
+
+  /* Highlight selection */
+  .highlight-yellow {
+    background: linear-gradient(
+      120deg,
+      rgba(249, 188, 96, 0.3) 0%,
+      rgba(249, 188, 96, 0.3) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 90%;
+  }
+
+  .highlight-green {
+    background: linear-gradient(
+      120deg,
+      rgba(171, 209, 198, 0.4) 0%,
+      rgba(171, 209, 198, 0.4) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 90%;
+  }
+}
+
+/* ===========================================
+   RESPONSIVE LAYOUT UTILITIES
+   Mobile: <768px | Tablet: 768-1023px | Desktop: ≥1024px
+   =========================================== */
+@layer utilities {
+  /* Container với responsive padding */
+  .container-responsive {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1400px;
+  }
+
+  /* Touch-friendly minimum sizes */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Safe area insets cho notch devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left, 0);
+  }
+
+  .safe-right {
+    padding-right: env(safe-area-inset-right, 0);
+  }
+
+  /* Mobile-first text sizes */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  /* Responsive gaps */
+  .gap-responsive {
+    @apply gap-3 sm:gap-4 lg:gap-6;
+  }
+
+  .gap-responsive-sm {
+    @apply gap-2 sm:gap-3 lg:gap-4;
+  }
+
+  /* Hide on specific breakpoints */
+  .hide-mobile {
+    @apply hidden sm:block;
+  }
+
+  .hide-tablet-up {
+    @apply block sm:hidden;
+  }
+
+  .hide-desktop {
+    @apply block lg:hidden;
+  }
+
+  .show-desktop-only {
+    @apply hidden lg:block;
+  }
+
+  /* Responsive card layouts */
+  .card-grid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Swipe hint animation for mobile */
+  .swipe-hint {
+    animation: swipeHint 2s ease-in-out infinite;
+  }
+
+  @keyframes swipeHint {
+    0%, 100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-10px);
+      opacity: 0.7;
+    }
+  }
+
+  /* Pull to refresh indicator */
+  .pull-indicator {
+    transition: transform 0.2s ease-out;
+  }
+
+  /* Bottom navigation safe area */
+  .bottom-nav-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 16px);
+  }
+
+  /* Scroll snap for mobile tabs */
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-snap-item {
+    scroll-snap-align: start;
+  }
+
+  /* Responsive modal/sheet heights */
+  .sheet-mobile {
+    max-height: 85vh;
+    max-height: 85dvh;
+  }
+
+  /* Prevent overscroll bounce */
+  .no-overscroll {
+    overscroll-behavior: none;
+  }
+
+  /* Smooth scroll for mobile */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Touch action hints */
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
+
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+
+  .touch-none {
+    touch-action: none;
+  }
+}
